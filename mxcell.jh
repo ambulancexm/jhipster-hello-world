@@ -1,0 +1,28 @@
+
+application {
+  config {
+    baseName myApp,
+    applicationType monolith,
+    packageName com.myapp,
+    authenticationType jwt,
+    prodDatabaseType postgresql,
+    clientFramework angular
+  }
+  entities *
+}
+
+entity MxCell {
+	id Long,
+    lg String,
+    style String,
+    
+}
+
+
+
+relationship OneToMany {
+   MxCell to Process,
+   Task to Process
+  
+}
+    
